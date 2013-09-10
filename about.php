@@ -18,8 +18,7 @@
 
 		<div id="content">
 			<h1>About</h1>
-			<p>     <!-- is there are way to have this from an editable text file? If there is, that is what 
-				we should do, makes it easier to edit -->
+			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
