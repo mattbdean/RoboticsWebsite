@@ -28,6 +28,7 @@
 				"Home" => "/",
 				"Rules and Rankings" => "rankings.php",
 				"About" => "about.php"
+				"Robots" => "robots.php"
 				);
 
 					// Loop through $navs and print an <a> tag
