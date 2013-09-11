@@ -22,8 +22,12 @@ class Parsedown_impl {
 
 		// If the file exists, is readable, and is not empty,
 		if (is_readable($fullFile) && filesize($fullFile) != 0) {
-			// Parse the file
-			echo $this->parsedown->parse(file_get_contents($fullFile));
+			// Buffer the output
+			ob_start();
+			// Parse and print the file
+			print $this->parsedown->parse(file_get_contents($fullFile));
+			// Close the buffer
+			ob_end_flush();
 		}
 	}
 }
