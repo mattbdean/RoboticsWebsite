@@ -29,9 +29,9 @@
 				"Rules and Rankings" => "rankings.php",
 				"Robots" => "robots.php",
 				"About" => "about.php"
-				);
+			);
 
-					// Loop through $navs and print an <a> tag
+			// Loop through $navs and print an <a> tag
 			foreach ($navs as $name => $location) {
 				echo sprintf('<a href="%s" class="navbar-element">%s</a>', $location, $name);
 			}
