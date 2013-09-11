@@ -13,13 +13,13 @@
 <body>
   <div id="wrapper">
    <?php
-    include 'template/header.php';
-    ?>
-    <!-- filler content not included --> 
-	<?php
-    include 'template/footer.php';
-    ?>
-</div>
+   include 'template/header.php';
+   ?>
+   <!-- filler content not included --> 
+   <?php
+   include 'template/footer.php';
+   ?>
+ </div>
 </body>
 </html>
 
