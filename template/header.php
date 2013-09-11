@@ -27,7 +27,7 @@
 			$navs = array(
 				"Home" => "/",
 				"Rules and Rankings" => "rankings.php",
-				"About" => "about.php"
+				"About" => "about.php",
 				"Robots" => "robots.php"
 				);
 
