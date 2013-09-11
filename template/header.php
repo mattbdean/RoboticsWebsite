@@ -27,8 +27,8 @@
 			$navs = array(
 				"Home" => "/",
 				"Rules and Rankings" => "rankings.php",
-				"About" => "about.php",
-				"Robots" => "robots.php"
+				"Robots" => "robots.php",
+				"About" => "about.php"
 				);
 
 					// Loop through $navs and print an <a> tag
