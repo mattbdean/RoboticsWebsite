@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BWHS Robotics | Home</title>
+	<title>BWHS Robotics | Robots</title>
 	<?php include 'template/meta.php'; ?>
 </head>
 <body>
