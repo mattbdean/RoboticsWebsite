@@ -10,7 +10,7 @@ Made application for team membership clearer
 Removed favoritism allowing certain members to start out at higher ranks, deemed to be OP. 
 
 9/3/13: Section C, Article 2: 
-Removed “chair defiling demerits”. Unnecessary.
+Removed "chair defiling demerits". Unnecessary.
 
 9/3/13: Section D: 
 Added last two sentences on earning merits and incessant asking for merits. 
