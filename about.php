@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>BWHS Robotics | About</title>
-	<?php include 'template/meta.php'; ?>
+	<?php include 'common/meta.php'; ?>
 </head>
 <body>
 	<div id="wrapper">
 		<?php
-		include 'template/header.php';
+		include 'common/header.php';
 		?>
 
 		<div id="content">
@@ -19,7 +19,7 @@
 		</div>
 
 		<?php
-		include 'template/footer.php';
+		include 'common/footer.php';
 		?>
 	</div>
 </body>

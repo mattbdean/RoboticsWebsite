@@ -2,16 +2,16 @@
 <html>
 <head>
 	<title>BWHS Robotics | Robots</title>
-	<?php include 'template/meta.php'; ?>
+	<?php include 'common/meta.php'; ?>
 </head>
 <body>
 	<div id="wrapper">
 		<?php
-		include 'template/header.php';
+		include 'common/header.php';
 		?>
 		<!-- filler content not included --> 
 		<?php
-		include 'template/footer.php';
+		include 'common/footer.php';
 		?>
 	</div>
 </body>
