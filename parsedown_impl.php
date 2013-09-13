@@ -18,6 +18,11 @@ class Parsedown_impl {
 	 * directory. No ".md" is needed.
 	 */
 	function display($file) {
+		// Prevent this function from potentially parsing a file called "site/.md"
+		if (!isset($file) || $file == "") {
+			return;
+		}
+
 		$fullFile = "site/$file.md";
 
 		// If the file exists, is readable, and is not empty,
