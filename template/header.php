@@ -26,7 +26,7 @@
 			// Defines the names and locations of the navbar elements
 			$navs = array(
 				"Home" => "/",
-				"Rules and Rankings" => "rankings.php",
+				"Rules and Hierarchy" => "rankings.php",
 				"Robots" => "robots.php",
 				"About" => "about.php"
 			);
