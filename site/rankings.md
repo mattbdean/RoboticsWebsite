@@ -56,5 +56,3 @@ Rules must be obeyed at all times:
 3. Ask for permission before interacting with robots you did not create
 4. Respect other members of the club and team.
 5. Use common sense. For example, chainsaws are usually not a valid solution for most problems.
-
-Last modified 9/13/13

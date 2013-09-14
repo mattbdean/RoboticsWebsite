@@ -42,7 +42,7 @@
 				<button class="spoiler-button">Show changelog</button>
 				<div class="spoiler-content">
 					<?php
-					$pd->display("rankings_changes");
+					$pd->display("rankings_changes", false);
 					?>
 				</div>
 			</div>
