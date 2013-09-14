@@ -52,7 +52,7 @@ There will be meetings every day after school from 4:00 to 5:00 the week before 
 Rules must be obeyed at all times:
 
 1. Don't break our stuff, or other people's stuff. Just don't break anything.
-2. Obey Mr.Scudder and Mr. Kittleson
+2. Obey Mr. Scudder and Mr. Kittleson
 3. Ask for permission before interacting with robots you did not create
 4. Respect other members of the club and team.
 5. Use common sense. For example, chainsaws are usually not a valid solution for most problems.
