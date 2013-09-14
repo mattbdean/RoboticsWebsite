@@ -2,5 +2,4 @@ Manual labor!
 Tracking merits since tomorrow!
 while (true) {codemonkey.code();}
 [insert witty robotics comment here]
-if(robotics) then TERMINATE!!! 
-
+if(robotics) then TERMINATE!!!
