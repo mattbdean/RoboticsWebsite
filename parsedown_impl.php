@@ -39,5 +39,9 @@ class Parsedown_impl {
 			}
 		}
 	}
+
+	function displaySingle($mdStr) {
+		print $this->parsedown->parse($mdStr);
+	}
 }
 ?>
