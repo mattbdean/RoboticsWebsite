@@ -64,11 +64,21 @@
 			print '<hr>';
 			foreach ($feedData as $feed) {
 				print '<div class="fb-post">';
+				print '<div class="fb-post-from">';
+				
+				// Get the poster's profile picture
+				$url = $fb->api('/' . $feed['from']['id'] . '?fields=picture.width(50).height(50)')['picture']['data']['url'];
+				print '<img class="fb-post-from-img" src="' . $url . '">';
+				print $feed['from']['name'];
+
+				// End fb-post-from
+				print '</div>';
 
 				// Replace URL with <a>
 				// http://stackoverflow.com/a/6393848/1275092
 				$message = preg_replace('#(\A|[^=\]\'"a-zA-Z0-9])(http[s]?://(.+?)/[^()<>\s]+)#i', '\\1<a href="\\2">\\3</a>', $feed['message']);
-				print '<p>' . $message . '</p>';
+				print '<p class="fb-post-from-msg">' . $message . '</p>';
+				// End fb-post
 				print '</div><hr>';
 			}
 			?>

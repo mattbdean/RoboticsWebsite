@@ -1,3 +1,18 @@
 .fb-post {
-	
+	padding: 10px;
+	/* Prevent the profile image from entering other posts if the message is one line */
+	min-height: 70px;
+}
+
+.fb-post-from-msg {
+	margin: 0 auto;
+}
+
+.fb-post-from-img {
+	float: left;
+	padding: 0 5px 5px 0;
+}
+
+.fb-post-from-name {
+	padding: 5px 0 0 0;
 }
