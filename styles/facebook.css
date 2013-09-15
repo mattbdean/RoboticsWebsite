@@ -13,6 +13,20 @@
 	padding: 0 5px 5px 0;
 }
 
-.fb-post-from-name {
+a.fb-post-from-name {
 	padding: 5px 0 0 0;
+}
+
+a.fb-post-from-name:link {
+	color: #3B5998;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.fb-post-from-name:hover {
+	text-decoration: underline;
+}
+
+a.fb-post-from-name:visited {
+	color: #3B5998;
 }

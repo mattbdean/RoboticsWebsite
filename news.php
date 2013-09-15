@@ -67,9 +67,13 @@
 				print '<div class="fb-post-from">';
 				
 				// Get the poster's profile picture
-				$url = $fb->api('/' . $feed['from']['id'] . '?fields=picture.width(50).height(50)')['picture']['data']['url'];
+				$poster = $feed['from'];
+				$url = $fb->api('/' . $poster['id'] . '?fields=picture.width(50).height(50)')['picture']['data']['url'];
 				print '<img class="fb-post-from-img" src="' . $url . '">';
-				print $feed['from']['name'];
+
+				// Create a link to the poster's Facebook profile in a new tab
+				// <a target="_blank" href="http://facebook.com/${POSTER_ID}">${POSTER_NAME}</a>
+				print '<a class="fb-post-from-name" target="_blank" href="http://facebook.com/' . $poster['id'] . '">' . $poster['name'] . '</a>';
 
 				// End fb-post-from
 				print '</div>';
