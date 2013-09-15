@@ -54,7 +54,7 @@
 
 			// Store group id as a string instead of number in case of overflow
 			$gid = '148185218647822';
-			$info = $fb->api('/' . $gid . '?fields=name,description,feed.limit(5).fields(message,name,from,picture)');
+			$info = $fb->api('/' . $gid . '?fields=feed.limit(5).fields(message,name,from,comments.fields(message,like_count,from))');
 
 			$pd->displaySingle('##' . $info['name']);
 
