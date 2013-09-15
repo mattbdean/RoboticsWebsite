@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>BWHS Robotics | News</title>
+	<link rel="stylesheet" href="styles/facebook.css">
 	<?php include 'common/meta.php'; ?>
 </head>
 <body>
@@ -55,6 +56,20 @@
 			$gid = '148185218647822';
 			$info = $fb->api('/' . $gid . '?fields=name,description,feed.limit(5).fields(message,name,from,picture)');
 
+			$pd->displaySingle('##' . $info['name']);
+
+			$feedData = $info['feed']['data'];
+			// echo '<pre>'; var_dump($feedData); echo '</pre>';
+
+			foreach ($feedData as $feed) {
+				print '<div class="fb-post">';
+
+				// Replace URL with <a>
+				// http://stackoverflow.com/a/6393848/1275092
+				$message = preg_replace('#(\A|[^=\]\'"a-zA-Z0-9])(http[s]?://(.+?)/[^()<>\s]+)#i', '\\1<a href="\\2">\\3</a>', $feed['message']);
+				print '<p>' . $message . '</p>';
+				print '</div>';
+			}
 			?>
 		</div>
 
