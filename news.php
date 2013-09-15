@@ -61,6 +61,7 @@
 			$feedData = $info['feed']['data'];
 			// echo '<pre>'; var_dump($feedData); echo '</pre>';
 
+			print '<hr>';
 			foreach ($feedData as $feed) {
 				print '<div class="fb-post">';
 
@@ -68,7 +69,7 @@
 				// http://stackoverflow.com/a/6393848/1275092
 				$message = preg_replace('#(\A|[^=\]\'"a-zA-Z0-9])(http[s]?://(.+?)/[^()<>\s]+)#i', '\\1<a href="\\2">\\3</a>', $feed['message']);
 				print '<p>' . $message . '</p>';
-				print '</div>';
+				print '</div><hr>';
 			}
 			?>
 		</div>
