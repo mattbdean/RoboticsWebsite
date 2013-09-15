@@ -54,9 +54,7 @@
 
 			// Store group id as a string instead of number in case of overflow
 			$gid = '148185218647822';
-			$info = $fb->api('/' . $gid . '?fields=feed.limit(5).fields(message,name,from,comments.fields(message,like_count,from))');
-
-			$pd->displaySingle('##' . $info['name']);
+			$info = $fb->api('/' . $gid . '?fields=feed.limit(5).fields(message,from,likes,comments.fields(message,like_count,from))');
 
 			$feedData = $info['feed']['data'];
 			// echo '<pre>'; var_dump($feedData); echo '</pre>';
@@ -64,6 +62,7 @@
 			print '<hr>';
 			foreach ($feedData as $feed) {
 				print '<div class="fb-post">';
+				print '<div class="fb-post-main">';
 				print '<div class="fb-post-from">';
 				
 				// Get the poster's profile picture
@@ -82,6 +81,23 @@
 				// http://stackoverflow.com/a/6393848/1275092
 				$message = preg_replace('#(\A|[^=\]\'"a-zA-Z0-9])(http[s]?://(.+?)/[^()<>\s]+)#i', '\\1<a href="\\2">\\3</a>', $feed['message']);
 				print '<p class="fb-post-from-msg">' . $message . '</p>';
+
+				// End fb-post-main
+				print '</div>';
+
+				// Get comments/likes of the main post
+				print '<div class="fb-stats">';
+				$likes = 0;
+				$comments = 0;
+				if (isset($feed['likes'])) {
+					$likes = count($feed['likes']);
+				}
+				if (isset($feed['comments'])) {
+					$comments = count($feed['comments']['data']);
+				}
+				print '<br>' . $likes . ' likes, ' . $comments . ' comments.';
+				print '</div>';
+
 				// End fb-post
 				print '</div><hr>';
 			}
