@@ -30,7 +30,8 @@
 				"Rules and Hierarchy" => "rankings.php",
 				"Robots" => "robots.php",
 				"About" => "about.php",
-				"Apply" => "application.php"
+				"Apply" => "application.php",
+				"Challenge" => "challenge.php"
 			);
 
 			// Loop through $navs and print an <a> tag
