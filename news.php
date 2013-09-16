@@ -90,10 +90,10 @@
 				$likes = 0;
 				$comments = 0;
 				if (isset($feed['likes'])) {
-					$likes = count($feed['likes']);
+					$likes = $feed['likes']['count'];
 				}
 				if (isset($feed['comments'])) {
-					$comments = count($feed['comments']['data']);
+					$comments = $feed['comments']['data']['count'];
 				}
 				print '<br>' . $likes . ' likes, ' . $comments . ' comments.';
 				print '</div>';
