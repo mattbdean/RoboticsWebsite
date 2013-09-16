@@ -95,7 +95,13 @@
 				if (isset($feed['comments'])) {
 					$comments = count($feed['comments']['data']);
 				}
-				print '<br>' . $likes . ' likes, ' . $comments . ' comments.';
+
+				// No likes or comments
+				if (!$likes && !$comments) {
+					print 'Nobody really seem to care about this post.';
+				}
+				// <p>5 (fb like icon), 10 (fb comment icon)</p>
+				printf('<p>%s <img src="%s" class="fb-icon" alt=" likes">, %s comments</p>', $likes == 0 ? "No" : $likes, "res/fb_like.png", $comments);
 				print '</div>';
 
 				// End fb-post
