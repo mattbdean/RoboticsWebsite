@@ -98,7 +98,7 @@
 
 				// No likes or comments
 				if (!$likes && !$comments) {
-					print '<p>Nobody really seem to care about this post.<p>';
+					print '<p class="fb-no-activity">Nobody really seem to care about this post.<p>';
 				} else {
 					// <p>5 (fb like icon), 10 (fb comment icon)</p>
 					printf('<p>%s %s, %s comments</p>', $likes == 0 ? "No" : $likes, $likes != 0 ? '<img src="res/fb_like.png" class="fb-icon" alt=" likes">' : "likes", $comments);

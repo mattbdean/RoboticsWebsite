@@ -17,6 +17,11 @@
 	
 }
 
+.fb-no-activity {
+	font-style: italic;
+	color: #9b9b9b;
+}
+
 .fb-icon {
 	width: 15px;
 	height: 15px;
