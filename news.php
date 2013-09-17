@@ -101,7 +101,7 @@
 					print 'Nobody really seem to care about this post.';
 				}
 				// <p>5 (fb like icon), 10 (fb comment icon)</p>
-				printf('<p>%s <img src="%s" class="fb-icon" alt=" likes">, %s comments</p>', $likes == 0 ? "No" : $likes, "res/fb_like.png", $comments);
+				printf('<p>%s %s, %s comments</p>', $likes == 0 ? "No" : $likes, $likes != 0 ? '<img src="res/fb_like.png" class="fb-icon" alt=" likes">' : "likes", $comments);
 				print '</div>';
 
 				// End fb-post
