@@ -9,5 +9,5 @@ Welcome, future applicant! If you are on this page, we assume that you want to a
  - All applicants must be a part of or willing to join the Technology Student Association (TSA)
  - All applicants will be applying for the Iron Falcons team, which is the new persons team. If you believe that you are good for the experienced team, please mark so on your application along with contact information. 
  
-If you still want to join, you can get the form [here](/downloads/Robotics_Application.pdf).
-If you have questions, email our advisor, cscudder@lcps.org
+If you want to join, you can get the form [here](/downloads/Robotics_Application.pdf).
+If you have questions, [email our advisor](mailto:cscudder@lcps.org), Mr. Scudder
