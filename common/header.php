@@ -29,10 +29,10 @@
 				"News" => "news.php",
 				"Rules and Hierarchy" => "rankings.php",
 				"Robots" => "robots.php",
-				"About" => "about.php",
 				"Apply" => "application.php",
-				"Challenge" => "challenge.php"
-			);
+				"Challenge" => "challenge.php",
+				"About" => "about.php"
+				);
 
 			// Loop through $navs and print an <a> tag
 			foreach ($navs as $name => $location) {
