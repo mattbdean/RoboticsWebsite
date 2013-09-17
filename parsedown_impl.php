@@ -31,13 +31,25 @@ class Parsedown_impl {
 			ob_start();
 			// Parse and print the file
 			print $this->parsedown->parse(file_get_contents($fullFile));
-			// Close the buffer
-			ob_end_flush();
 
 			if ($lastModified) {
-				print '<hr><p>Last modified ' . date('l jS, Y', filemtime($fullFile)) . '</p>';
+				$this->displayLastModified($file);
 			}
+			
+			// Close the buffer
+			ob_end_flush();
 		}
+	}
+	
+	function displayLastModified($file) {
+		// Prevent this function from potentially parsing a file called "site/.md"
+		if (!isset($file) || $file == "") {
+			return;
+		}
+		
+		$fullFile = "site/$file.md";
+		
+		print '<hr><p>Last modified ' . date('l jS, Y', filemtime($fullFile)) . '</p>';
 	}
 
 	function displaySingle($mdStr) {
