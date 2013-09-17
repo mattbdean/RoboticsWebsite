@@ -6,8 +6,8 @@ Welcome, future applicant! If you are on this page, we assume that you want to a
  - Experience matters
  - If you aren't dedicated, don't bother applying 
  - This is NOT a filler club. If you join, you will have to do WORK.
- - ALL APPLICANTS MUST BE A PART OF OR WILLING TO JOIN TSA (Technology Student Assossiation)  
+ - All applicants must be a part of or willing to join the Technology Student Association (TSA)
  - All applicants will be applying for the Iron Falcons team, which is the new persons team. If you believe that you are good for the experienced team, please mark so on your application along with contact information. 
  
-If you still want to join, you can get the form [here](/downloads/Robotics_Application.pdf).  
+If you still want to join, you can get the form [here](/downloads/Robotics_Application.pdf).
 If you have questions, email our advisor, cscudder@lcps.org
