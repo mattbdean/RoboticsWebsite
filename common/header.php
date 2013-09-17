@@ -29,8 +29,8 @@
 				"News" => "news.php",
 				"Rules and Hierarchy" => "rankings.php",
 				"Robots" => "robots.php",
-				"Apply" => "application.php",
 				"Challenge" => "challenge.php",
+				"Apply" => "application.php",
 				"About" => "about.php"
 				);
 
