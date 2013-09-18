@@ -116,8 +116,23 @@ function getUrlFor($id) {
 				if (!$likes && !$comments) {
 					print '<p class="fb-no-activity">Nobody really seems to care about this post.<p>';
 				} else {
-					// <p>5 (fb like icon), 10 (fb comment icon)</p>
-					printf('<p>%s %s, %s comments</p>', $likes == 0 ? "No" : $likes, $likes != 0 ? '<img src="res/fb_like.png" class="fb-icon" alt=" likes">' : "likes", $comments);
+					// We have to grammar properly
+					$likeStatus = "$likes like";
+					if ($likes == 0) {
+						$likeStatus = "No likes";
+					} else if ($likes != 1) {
+						$likeStatus .= "s";
+					}
+
+					$commentStatus = "$comments comment";
+					if ($comments == 0) {
+						$commentStatus = "no comments";
+					} else if ($comments != 1) {
+						$commentStatus .= "s";
+					}
+					
+					// <p>5 likes, 10 comments</p>
+					printf('<p>%s, %s</p>', $likeStatus, $commentStatus);
 				}
 
 				print '<div class="fb-comment-list">';
