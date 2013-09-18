@@ -102,7 +102,6 @@ function getUrlFor($id) {
 				print '</div>';
 
 				// Get comments/likes of the main post
-				print '<div class="fb-stats">';
 				$likes = 0;
 				$comments = 0;
 				if (isset($feed['likes'])) {
@@ -114,7 +113,7 @@ function getUrlFor($id) {
 
 				// No likes or comments
 				if (!$likes && !$comments) {
-					print '<p class="fb-no-activity">Nobody really seems to care about this post.<p>';
+					print '<p class="fb-stats">Nobody really seems to care about this post.<p>';
 				} else {
 					// We have to grammar properly
 					$likeStatus = "$likes like";
@@ -132,7 +131,7 @@ function getUrlFor($id) {
 					}
 					
 					// <p>5 likes, 10 comments</p>
-					printf('<p>%s, %s</p>', $likeStatus, $commentStatus);
+					printf('<p class="fb-stats">%s, %s</p>', $likeStatus, $commentStatus);
 				}
 
 				print '<div class="fb-comment-list">';
@@ -145,9 +144,6 @@ function getUrlFor($id) {
 					}
 				}
 				
-				print '</div>';
-
-				// End fb-stats
 				print '</div>';
 
 
