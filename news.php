@@ -69,6 +69,8 @@ function getUrlFor($id) {
 			$feedData = $info['feed']['data'];
 			// echo '<pre>'; var_dump($feedData); echo '</pre>';
 
+			// Start output buffering
+			ob_start();
 			print '<hr>';
 			$counter = 0;
 			foreach ($feedData as $feed) {
@@ -137,6 +139,9 @@ function getUrlFor($id) {
 				// End fb-post
 				print '</div><hr>';
 			}
+
+			// End output buffering
+			ob_end_flush();
 			?>
 		</div>
 
