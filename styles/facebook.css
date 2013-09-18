@@ -25,23 +25,30 @@
 .fb-icon {
 	width: 15px;
 	height: 15px;
-	
 }
 
-a.fb-post-from-name {
+.fb-comments-list {
+
+}
+
+.fb-comment {
+
+}
+
+a.fb-name {
 	padding: 5px 0 0 0;
 }
 
-a.fb-post-from-name:link {
+a.fb-name:link {
 	color: #3B5998;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-a.fb-post-from-name:hover {
+a.fb-name:hover {
 	text-decoration: underline;
 }
 
-a.fb-post-from-name:visited {
+a.fb-name:visited {
 	color: #3B5998;
 }

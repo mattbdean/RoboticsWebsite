@@ -1,3 +1,13 @@
+<?php
+function getPictureUrlFor($id, $fb, $width = 50, $height = 50) {
+	return $fb->api($id . '/' . "?fields=picture.width($width).height($height)")['picture']['data']['url'];
+}
+
+function getUrlFor($id) {
+	return "http://facebook.com/$id";
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,19 +70,23 @@
 			// echo '<pre>'; var_dump($feedData); echo '</pre>';
 
 			print '<hr>';
+			$counter = 0;
 			foreach ($feedData as $feed) {
+				$counter++;
+
 				print '<div class="fb-post">';
 				print '<div class="fb-post-main">';
 				print '<div class="fb-post-from">';
 				
 				// Get the poster's profile picture
 				$poster = $feed['from'];
-				$url = $fb->api('/' . $poster['id'] . '?fields=picture.width(50).height(50)')['picture']['data']['url'];
+				// $url = $fb->api('/' . $poster['id'] . '?fields=picture.width(50).height(50)')['picture']['data']['url'];
+				$url = getPictureUrlFor($poster['id'], $fb);
 				print '<img class="fb-post-from-img" src="' . $url . '">';
 
 				// Create a link to the poster's Facebook profile in a new tab
 				// <a target="_blank" href="http://facebook.com/${POSTER_ID}">${POSTER_NAME}</a>
-				print '<a class="fb-post-from-name" target="_blank" href="http://facebook.com/' . $poster['id'] . '">' . $poster['name'] . '</a>';
+				print '<a class="fb-name" target="_blank" href="' . getUrlFor($poster['id']) . '">' . $poster['name'] . '</a>';
 
 				// End fb-post-from
 				print '</div>';
@@ -103,7 +117,23 @@
 					// <p>5 (fb like icon), 10 (fb comment icon)</p>
 					printf('<p>%s %s, %s comments</p>', $likes == 0 ? "No" : $likes, $likes != 0 ? '<img src="res/fb_like.png" class="fb-icon" alt=" likes">' : "likes", $comments);
 				}
+
+				print '<div class="fb-comment-list">';
+				// Print all the comments, if they exist
+				if (isset($feed['comments'])) {
+					foreach ($feed['comments']['data'] as $comment) {
+						// var_dump($comment);
+						print '<div class="fb-comment">';
+						$from = $comment['from'];
+						print('<p><a class="fb-name" href="' . getUrlFor($from['id']) . '" target="_blank">' . $from['name'] . '</a>: ' .$comment['message'] . '</p>');
+						// End fb-comment
+						print '</div>';
+					}
+				}
 				
+				print '</div>';
+
+				// End fb-stats
 				print '</div>';
 
 
