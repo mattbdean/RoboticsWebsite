@@ -123,11 +123,8 @@ function getUrlFor($id) {
 				if (isset($feed['comments'])) {
 					foreach ($feed['comments']['data'] as $comment) {
 						// var_dump($comment);
-						print '<div class="fb-comment">';
 						$from = $comment['from'];
-						print('<p><a class="fb-name" href="' . getUrlFor($from['id']) . '" target="_blank">' . $from['name'] . '</a>: ' .$comment['message'] . '</p>');
-						// End fb-comment
-						print '</div>';
+						print('<p class="fb-comment"><a class="fb-name" href="' . getUrlFor($from['id']) . '" target="_blank">' . $from['name'] . '</a>: ' .$comment['message'] . '</p>');
 					}
 				}
 				

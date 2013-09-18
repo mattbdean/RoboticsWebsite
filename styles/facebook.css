@@ -27,12 +27,14 @@
 	height: 15px;
 }
 
-.fb-comments-list {
-
+.fb-comment-list {
+	padding: 0 15px;
+	border-left: solid thick #336699;
 }
 
-.fb-comment {
-
+p.fb-comment {
+	text-indent: -30px;
+	padding-left: 30px;
 }
 
 a.fb-name {
