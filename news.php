@@ -34,8 +34,13 @@ function getUrlFor($id) {
 
 			// Create the Facebook object
 			$fb = new Facebook(array(
+				// Production:
 				'appId' => '572573956113919',
 				'secret' => 'bd5e8db924d8401a00cbf3ea06a494a8'
+
+				// Local developement
+				// 'appId' => '580380555359498',
+				// 'secret' => 'f1e3ad3b7a5e2a7b94a203f13e0fac7c'
 				));
 			$fbUser = $fb->getUser();
 
