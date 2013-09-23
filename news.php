@@ -100,7 +100,8 @@ function getUrlFor($id) {
 
 				// Replace URL with <a>
 				// http://stackoverflow.com/a/6393848/1275092
-				$message = preg_replace('#(\A|[^=\]\'"a-zA-Z0-9])(http[s]?://(.+?)/[^()<>\s]+)#i', '\\1<a href="\\2">\\3</a>', $feed['message']);
+				$message = preg_replace('@(?<![.*">])\b(?:(?:https?|ftp|file)://|[a-z]\.)[-A-Z0-9+&#/%=~_|$?!:,.]*[A-Z0-9+&#/%=~_|$]@i', '<a href="\0" target="_blank">\0</a>', $feed['message']);
+				// $message = preg_replace('#(\A|[^=\]\'"a-zA-Z0-9])(http[s]?://(.+?)/[^()<>\s]+)#i', '\\1<a href="\\2">\\3</a>', $feed['message']);
 				print '<p class="fb-post-from-msg">' . $message . '</p>';
 
 				// End fb-post-main
@@ -145,7 +146,10 @@ function getUrlFor($id) {
 					foreach ($feed['comments']['data'] as $comment) {
 						// var_dump($comment);
 						$from = $comment['from'];
-						print('<p class="fb-comment"><a class="fb-name" href="' . getUrlFor($from['id']) . '" target="_blank">' . $from['name'] . '</a>: ' .$comment['message'] . '</p>');
+
+						// Replace URL with <a>
+						$commentMessage = preg_replace('@(?<![.*">])\b(?:(?:https?|ftp|file)://|[a-z]\.)[-A-Z0-9+&#/%=~_|$?!:,.]*[A-Z0-9+&#/%=~_|$]@i', '<a href="\0" target="_blank">\0</a>', $comment['message']);
+						print('<p class="fb-comment"><a class="fb-name" href="' . getUrlFor($from['id']) . '" target="_blank">' . $from['name'] . '</a>: ' . $commentMessage . '</p>');
 					}
 				}
 				
