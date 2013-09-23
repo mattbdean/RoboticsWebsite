@@ -6,6 +6,7 @@
 
 .fb-post-from-msg {
 	margin: 0 auto;
+	font-size: 15px;
 }
 
 .fb-post-from-img {
@@ -33,20 +34,24 @@ p.fb-comment {
 	padding-left: 30px;
 }
 
-a.fb-name {
+a.fb-name, a.fb-name-poster {
 	padding: 5px 0 0 0;
 }
 
-a.fb-name:link {
+a.fb-name-poster {
+	font-size: 20px;
+}
+
+a.fb-name:link, a.fb-name-poster:link {
 	color: #3B5998;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-a.fb-name:hover {
+a.fb-name:hover, a.fb-name-poster:hover {
 	text-decoration: underline;
 }
 
-a.fb-name:visited {
+a.fb-name:visited, a.fb-name-poster:visited {
 	color: #3B5998;
 }
