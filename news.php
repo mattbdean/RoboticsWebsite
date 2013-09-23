@@ -91,7 +91,7 @@ function getUrlFor($id) {
 
 				// Create a link to the poster's Facebook profile in a new tab
 				// <a target="_blank" href="http://facebook.com/${POSTER_ID}">${POSTER_NAME}</a>
-				print '<a class="fb-name" target="_blank" href="' . getUrlFor($poster['id']) . '">' . $poster['name'] . '</a>';
+				print '<a class="fb-name-poster" target="_blank" href="' . getUrlFor($poster['id']) . '">' . $poster['name'] . '</a>';
 
 				// End fb-post-from
 				print '</div>';
