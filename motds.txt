@@ -1,6 +1,5 @@
 Manual labor!
 Tracking merits since tomorrow!
 while (true) {codemonkey.code();}
-[insert witty robotics comment here]
-if(robotics) then TERMINATE!!!
-robotics^2 = engineering^2 + coding^2 
+[insert witty comment here]
+robotics<sup>2<sup> = engineering<sup>2</sup> + coding<sup>2</sup>
