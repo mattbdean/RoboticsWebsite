@@ -2,4 +2,4 @@ Manual labor!
 Tracking merits since tomorrow!
 while (true) {codemonkey.code();}
 [insert witty comment here]
-robotics<sup>2<sup> = engineering<sup>2</sup> + coding<sup>2</sup>
+robotics<sup>2</sup> = engineering<sup>2</sup> + coding<sup>2</sup>
