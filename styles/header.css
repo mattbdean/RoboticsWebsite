@@ -32,7 +32,7 @@
 }
 
 /* Colors in the background */
-#navbar, #header {
+nav, #header {
 	position: relative;
 	margin: 0 auto;
 	width: 960px;
@@ -43,7 +43,7 @@
 	background-color: #EC6E00;
 }
 
-#navbar {
+nav {
 	padding: 13px 10px;
 }
 

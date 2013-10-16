@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	<div id="navbar-wrapper">
-		<div id="navbar">
+		<nav>
 			<?php
 			// Print the navigation bar dynamically so that we are able
 			// to add more places if necessary in the future easily
@@ -39,6 +39,6 @@
 				echo sprintf('<a href="%s" class="navbar-element">%s</a>', $location, $name);
 			}
 			?>
-		</div>
+		</nav>
 	</div>
 </div>
